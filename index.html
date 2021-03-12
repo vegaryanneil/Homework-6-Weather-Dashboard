@@ -1,32 +1,105 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="assets/materialize/css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="shortcut icon" type="image/jpg" href="/favicon.jpg"/> -->
     <title>Weather Dashboard</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <script
-      defer
-      src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"
-    ></script>
-  </head>
-  <body>
-    <div class="hero is-fullheight">
-      <div class="location"></div>
-      <h1 class="location-timezone title is-1">Timezone</h1>
-      <p class="">icon</p>
-      <div class="temperature">
-        <div class="degree">
-          <h2 class="temperature-degree title is-1">34</h2>
-          <span>Farenheit</span>
-        </div>
-        <div class="temperature-description subtitle is-4">It's chilly</div>
-      </div>
+</head>
+<body>
+  <!-- Nav Bar -->
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="logo">Weather Dashboard</a>
+    </ul>
     </div>
-    <script src="app.js"></script>
-  </body>
+  </nav>
+  <!--Row for searching a city-->
+  <div class="row">
+    <div class="col s4">
+      <h4 class="pt-1"><strong>Search for a City:</strong></h4>
+      <di class="input-group">
+        <input type="text" class="form-control"id="search-city" aria-label="City Search" aria-describedby="search-button">
+        <div class="input-group-append">
+                  <button class="btn" id="search-button"><i class="fa fa-search"></i></button>
+                  <button class="btn" type="button" id="clear-history">Clear history</button>
+              </div>
+            </di>
+          <!--section for search city history-->
+          <ul class="list-group"></ul>
+        </div>   
+      <class class="col s4">
+        
+              <div class="col s4" id="current-weather">
+                  <h3 class="city-name" id="current-city"></h3>
+                  <p>Temperature:<span class="current" id="temperature"></span></p>
+                  <p>Humidity:<span class="current" id="humidity"></span></p> 
+                  <p>Wind Speed:<span class="current" id="wind-speed"></span></p>
+                  <p>UV index:<span class="current" id="uv-index"></span></p> 
+              </div>
+          </div>
+          <!--Row for future data to be dumped here-->
+    
+
+<!-- 5 Day Forecast Cards -->
+  <div class="row forecast-container" id ="future-weather">
+
+    <h3>5-Day Forecast:</h3>
+
+    <div class="row">
+  
+  <div class="col s2 forecast-card" >
+    <p id="fDate0"></p>
+    <p id="fImg0"></p>
+    <p class="forecast-info">Temp: <span id="fTemp0"></span></p>
+    <p class="forecast-info">Humidity: <span id="fHumidity0"></span></p>
+  </div>
+  
+  <div class="col s2 forecast-card">
+    <p id="fDate1"></p>
+    <p id="fImg1"></p>
+    <p class="forecast-info">Temp: <span id="fTemp1"></span></p>
+    <p class="forecast-info">Humidity: <span id="fHumidity1"></span></p>
+  </div>
+  
+  <div class="col s2 forecast-card">
+    <p id="fDate2"></p>
+    <p id="fImg2"></p>
+    <p class="forecast-info">Temp: <span id="fTemp2"></span></p>
+    <p class="forecast-info">Humidity: <span id="fHumidity2"></span></p>
+  </div>
+  
+  <div class="col s2 forecast-card">
+    <p id="fDate3"></p>
+    <p id="fImg3"></p>
+    <p class="forecast-info">Temp: <span id="fTemp3"></span></p>
+    <p class="forecast-info">Humidity: <span id="fHumidity3"></span></p>
+  </div>
+  
+  <div class="col s2 forecast-card">
+    <p id="fDate4"></p>
+    <p id="fImg4"></p>
+    <p class="forecast-info">Temp: <span id="fTemp4"></span></p>
+    <p class="forecast-info">Humidity: <span id="fHumidity4"></span></p>
+  </div>
+</div>
+</div>
+
+  <!--jQuery JS-->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+        
+    <script type="text/javascript" src="assets/materialize/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
 </html>
+

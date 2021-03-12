@@ -1,0 +1,47 @@
+:root {
+    --main-color: #8ac4d0;
+    --text-color: #222831;
+    --button-color: #f4d160;
+}
+
+* {
+    font-family: "Oswald", sans-serif;
+}
+
+.logo {
+    color: var(--text-color);
+    padding: 0 2rem;
+    font-size: 3rem;
+}
+.nav-wrapper {
+    background-color: var(--main-color);
+}
+
+.btn {
+    background-color: var(--button-color);
+    color: var(--text-color);
+    margin: 1rem;
+}
+li {
+    margin: 1rem;
+    background-color: var(--button-color);
+    color: var(--text-color);
+}
+
+.forecast-container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.forecast-card {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2rem;
+    background-color: var(--main-color);
+    font-family: "Oswald", sans-serif;
+}
+
+.forecast-info {
+    margin: 1rem;
+}

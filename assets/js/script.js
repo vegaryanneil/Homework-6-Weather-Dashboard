@@ -38,8 +38,6 @@ function currentWeather(city){
         method:"GET",
     }).then(function(response){
 
-        // parse the response to display the current weather, name, date of city.
-        console.log(response);
         //Server side A for icon property.
         var weathericon= response.weather[0].icon;
         var iconURL="https://openweathermap.org/img/wn/"+weathericon +"@2x.png";
@@ -121,7 +119,7 @@ function forecast(cityid){
     });
 }
 
-//Daynamically add the passed city on the search history
+//adds city to search history
 function addToList(c){
     var listEl= $("<li>"+c.toUpperCase()+"</li>");
     $(listEl).attr("class","list-group-item");
